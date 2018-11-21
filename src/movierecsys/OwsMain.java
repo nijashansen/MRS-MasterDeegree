@@ -41,7 +41,7 @@ public final class OwsMain extends Application {
      * @param args the command line argument
      */
     public static void main(String[] args) throws IOException {
-        //launch(args);
+        launch(args);
         MRSManager mrs = new MRSManager();
         UserDAO uDAO = new UserDAO();
         User user = uDAO.getUser(7);

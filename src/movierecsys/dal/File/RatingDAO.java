@@ -202,7 +202,14 @@ public class RatingDAO implements IRatingRepository {
 
     @Override
     public List<Rating> getRatings(User user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Rating> ratings = new ArrayList<>();
+        List<Rating> ratingsOfUser = new ArrayList<>();
+        for (Rating rating : ratings) {
+            if (rating.getUser() == user.getId()) {
+                ratingsOfUser.add(rating);
+            }
+        }
+        return ratingsOfUser;
     }
 
 }
